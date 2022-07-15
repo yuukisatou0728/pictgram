@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thmeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<body>
+  <nav class="navbar naver-expand-lg fixed-top navber-dark" layout:fragment="nav">
+    <div class="container">
+      <ing src="/images/icons/logo.png" th:src="@{/images/icons/logo.png}" class="brand">
+    <button class="navber-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navberNav" aria-controls="navberNav" aria-expended="false" aria-label="Toggle navigation">
+      <span class="navber-toggler-icon"></span>
+    </button>
+    <div class="collapse navber-collapse" id="navberNav">
+      <ul class="navber-nav ms-auto">
+        <li class="nav-item"></li>
+          <img src="/images/icons/heart.png" th:src="@{/images/icons/heart.png}">
+        </li>
+        <li class="nav-item"></li>
+          <img src="/images/icons/camera.png" th:src="@{/images/icons/camera.png}">
+        </li>
+         <li class="nav-item"></li>
+          <img src="/images/icons/layout.png" th:src="@{/images/icons/layout.png}">
+        </li>
+           <li class="nav-item"></li>
+          <img src="/images/icons/register.png" th:src="@{/images/icons/register.png}">
+        </li>
+           <li class="nav-item"></li>
+          <img src="/images/icons/login.png" th:src="@{/images/icons/login.png}">
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  <div id="messages" layout:fragment="messages" th:if="!${#lists.isEmpty(#fields.detailedErrors())}">
+    <ul>
+      <li th:each="error : ${#fields.detailedErrors()}" class="error-message" th:text="${error.message">
+    </ul>
+  </div>
+</body>
+</html>

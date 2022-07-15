@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<htnml
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleat/layout"
+  layout:decorate="~{layout/layout}">
+  <head>
+    <title>Pictgram</title>
+  </head>
+  <body>
+    <div class="pages-index-wrapper text-center" layout:fragments="contents">
+      <div class="container">
+        <div class="row p-form-top d-lg-block d-xxl-block">
+        <h1 class="text-white">Make you Happy</h1>
+        <h2 class="text-white">Pictgram is a servise that you can post photos.</h2>
+        <div class="d-none d-lg-block d-xxl-block">
+        <div class="row justify-content-center">
+          <div class="col-3">
+            <a class="btn w-100 btn-outline-light" href="/users/new">Sign up</a>
+          </div>
+          <div class="col-3"></div>
+            <a class="btn w-100 btn-outline-light" href="/users/new">Log in</a>
+           </div>
+        </div>
+        </div>
+        <div class="d-block d-log-none d-xl-none d-xxl-none">
+          <a class="btn w-100 btn-outline-light mb-3" href="/users/new">Sign up</a>
+          <a class="btn w-100 btn-outline-light" href="/login">Log in</a>
+        </div>
+      </div>
+    </div>
+  </body>
+ </htnml>
